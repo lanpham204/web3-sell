@@ -18,43 +18,41 @@ export const CreateNFT = () => {
     };
     return (
         <>
-        <div style={{height:"150px"}}></div>
-        <Form
-            name="nft-form"
-            labelCol={{ span: 8 }}
-            wrapperCol={{ span: 8 }}
-            onFinish={onFinish}
-        >
-            <Form.Item
-                label="Name"
-                name="name"
-                rules={[{ required: true, message: "Please input the name!" }]}
+            <div style={{ height: "150px" }}></div>
+            <Form
+                name="nft-form"
+                labelCol={{ span: 8 }}
+                wrapperCol={{ span: 8 }}
+                onFinish={onFinish}
             >
-                <Input />
-            </Form.Item>
-            <Form.Item
-                label="Description"
-                name="description"
-                rules={[{ required: true, message: "Please input the description!" }]}
-            >
-                <Input />
-            </Form.Item>
+                <Form.Item
+                    label={<label style={{ color: "white" }}>name</label>}
+                    name="name"
+                    rules={[{ required: true, message: "Please input the name!" }]}
+                >
+                    <Input />
+                </Form.Item>
+                <Form.Item
+                    label={<label style={{ color: "white" }}>Description</label>}
+                    name="description"
+                    rules={[{ required: true, message: "Please input the description!" }]}
+                >
+                    <Input />
+                </Form.Item>
 
-            <Form.Item
-                label="Image URL"
-                name="imageUrl"
-                rules={[{ required: true, message: "Please input the image URL!" }]}
-            >
-                <Input />
-            </Form.Item>
-
-
-            <Form.Item wrapperCol={{ offset: 8, span: 8 }}>
-                <Button type="primary" htmlType="submit">
-                    Create NFT
-                </Button>
-            </Form.Item>
-        </Form>
+                <Form.Item
+                    label={<label style={{ color: "white" }}>Image URL</label>}
+                    name="imageUrl"
+                    rules={[{ required: true, message: "Please input the image URL!" }]}
+                >
+                    <Input />
+                </Form.Item>
+                <Form.Item wrapperCol={{ offset: 8, span: 8 }}>
+                    <Button type="primary" htmlType="submit">
+                        Create NFT
+                    </Button>
+                </Form.Item>
+            </Form>
         </>
     )
 }
