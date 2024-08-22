@@ -3,6 +3,8 @@ import React, { FC, useEffect, useMemo, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { buyNFT, getNFT } from '../services/gameShiftService';
 import { message } from 'antd';
+import HeaderFlagment from './HeaderFlagment';
+import Footer from './footer';
 export const NFTDetailMarketplace = () => {
     const { id } = useParams()
     const { publicKey, sendTransaction, connected } = useWallet();
@@ -37,7 +39,8 @@ export const NFTDetailMarketplace = () => {
         }
     }
     return (
-        <>
+        <div>
+            <div style={{height:"150px"}}></div>
             {
                 nftDetails != null ? (
                     <div className="container mt-5">
@@ -63,7 +66,7 @@ export const NFTDetailMarketplace = () => {
                 ) : <div></div>
 
             }
-        </>
+        </div>
 
     );
 };

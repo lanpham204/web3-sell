@@ -1,4 +1,3 @@
-import React from "react";
 import { Form, Input, Button, message } from "antd";
 import { createNFT } from "../services/gameShiftService";
 import { useWallet } from "@solana/wallet-adapter-react";
@@ -18,6 +17,8 @@ export const CreateNFT = () => {
             });
     };
     return (
+        <>
+        <div style={{height:"150px"}}></div>
         <Form
             name="nft-form"
             labelCol={{ span: 8 }}
@@ -54,5 +55,6 @@ export const CreateNFT = () => {
                 </Button>
             </Form.Item>
         </Form>
+        </>
     )
 }
