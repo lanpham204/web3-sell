@@ -42,7 +42,7 @@ export const Marketplace = () => {
                             <div className="row">
                                 <div className="col-lg-7">
                                     <div className="header-text">
-                                        <h6>Welcome To Cyborg</h6>
+                                        <h6>Welcome To NFT Marketplace</h6>
                                         <h4><em>Browse</em> Our Popular Art NFT Here</h4>
                                         <div className="main-button">
                                             <Link to={""}>Browse Now</Link>
